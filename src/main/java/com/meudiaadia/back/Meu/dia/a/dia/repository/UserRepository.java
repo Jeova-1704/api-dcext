@@ -1,6 +1,6 @@
 package com.meudiaadia.back.Meu.dia.a.dia.repository;
 
-import com.meudiaadia.back.Meu.dia.a.dia.domain.user.User;
+import com.meudiaadia.back.Meu.dia.a.dia.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.meudiaadia.back.Meu.dia.a.dia.domain.user;
+package com.meudiaadia.back.Meu.dia.a.dia.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Table(name = "users")

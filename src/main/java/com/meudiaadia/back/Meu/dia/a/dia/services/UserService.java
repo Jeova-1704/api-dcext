@@ -1,6 +1,6 @@
 package com.meudiaadia.back.Meu.dia.a.dia.services;
 
-import com.meudiaadia.back.Meu.dia.a.dia.domain.user.User;
+import com.meudiaadia.back.Meu.dia.a.dia.domain.User;
 import com.meudiaadia.back.Meu.dia.a.dia.dto.request.CreateUserRequest;
 import com.meudiaadia.back.Meu.dia.a.dia.dto.request.UserLoginRequest;
 import com.meudiaadia.back.Meu.dia.a.dia.dto.respose.CreatedUserResponse;
