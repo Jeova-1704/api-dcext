@@ -23,6 +23,11 @@ public class AgendaToDoController {
         return ResponseEntity.ok().body(agendaTodoResponses);
     }
 
+    @GetMapping("/agenda/{agendaId}")
+    public ResponseEntity<AgendaTodoResponse> findAgendaToDoById(@PathVariable UUID agendaId) {
+        return ResponseEntity.ok().body(agendaToDoServices.findAgendaToDoById(agendaId));
+    }
+
     @PostMapping
     public ResponseEntity<AgendaTodoResponse> createAgendaToDo(@RequestBody AgendaTodoRequest agendaTodoRequest) {
         return ResponseEntity.ok().body(agendaToDoServices.createAgendaToDo(agendaTodoRequest));

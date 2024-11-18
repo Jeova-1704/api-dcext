@@ -12,6 +12,7 @@ import com.meudiaadia.back.Meu.dia.a.dia.repository.TodoRepository;
 import com.meudiaadia.back.Meu.dia.a.dia.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,5 +95,12 @@ public class AgendaToDoServices {
         agenda.setHoraInicial(agendaTodoRequest.horaInicial());
         agenda.setHoraFinal(agendaTodoRequest.horaFinal());
         return agenda;
+    }
+
+    @Transactional
+    public AgendaTodoResponse findAgendaToDoById(UUID agendaId) {
+        Agenda agenda = agendaRepository.findById(agendaId).orElseThrow();
+        List<ToDo> todo = todoRepository.findAllByAgendaId(agendaId);
+        return agendaTodoResponseFromDomain(agenda, todo);
     }
 }
