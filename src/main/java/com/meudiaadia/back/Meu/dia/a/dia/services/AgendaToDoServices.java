@@ -47,6 +47,7 @@ public class AgendaToDoServices {
         return agendaTodoResponses;
     }
 
+    @Transactional
     public void deleteAgendaToDoById(UUID agendaId) {
         todoRepository.deleteAllByAgendaId(agendaId);
         agendaRepository.deleteById(agendaId);
